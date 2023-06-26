@@ -2,6 +2,7 @@ import React from "react";
 import { DocsThemeConfig } from "nextra-theme-docs";
 
 const config: DocsThemeConfig = {
+  primaryHue: 100,
   logo: (
     <div style={{ height: 40, display: "flex", gap: 8, alignItems: "center" }}>
       <svg
