@@ -37,6 +37,11 @@ const config: DocsThemeConfig = {
       DOCS
     </div>
   ),
+  useNextSeoProps() {
+    return {
+      titleTemplate: "%s – PGN",
+    };
+  },
   project: {
     link: "https://github.com/supermodularxyz/pgn-docs",
   },
