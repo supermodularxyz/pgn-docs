@@ -1,6 +1,9 @@
 {
   "index": "Introduction",
   "another": "Another Page",
+  "---": {
+    "type": "separator"
+  },
   "advanced": "Advanced (A Folder)",
   "about": {
     "title": "About",
