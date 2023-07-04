@@ -1,12 +1,28 @@
 {
   "index": "Introduction",
-  "another": "Another Page",
   "---": {
     "type": "separator"
   },
-  "advanced": "Advanced (A Folder)",
   "about": {
     "title": "About",
     "type": "page"
+  },
+  "getting-started": {
+    "title": "Getting Started"
+  },
+  "quick-links": {
+    "title": "Quick Links",
+    "children": [
+      {
+        "name": "Bridge",
+        "href": "https://google.com",
+        "newWindow": true
+      },
+      {
+        "name": "Faucet",
+        "href": "https://yahoo.com",
+        "newWindow": true
+      }
+    ]
   }
 }

@@ -1,0 +1,9 @@
+{
+  "rpc-endpoints": "RPC Endpoints",
+  "bridge": {
+    "title": "Bridging Funds from Sepolia"
+  },
+  "faucet": {
+    "title": "Getting testnet Eth"
+  }
+}
