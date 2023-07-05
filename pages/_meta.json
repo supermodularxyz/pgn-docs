@@ -1,11 +1,9 @@
 {
-  "index": "Introduction",
-  "---": {
-    "type": "separator"
+  "index": {
+    "title": "Introduction"
   },
   "about": {
-    "title": "About",
-    "type": "page"
+    "title": "About"
   },
   "getting-started": {
     "title": "Getting Started"
@@ -15,12 +13,17 @@
     "children": [
       {
         "name": "Bridge",
-        "href": "https://google.com",
+        "href": "https://pgn-bridge.vercel.app/bridge",
         "newWindow": true
       },
       {
         "name": "Faucet",
         "href": "https://yahoo.com",
+        "newWindow": true
+      },
+      {
+        "name": "Block Explorer",
+        "href": "https://explorer.sepolia.publicgoods.network/",
         "newWindow": true
       }
     ]
