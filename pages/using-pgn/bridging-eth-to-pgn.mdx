@@ -1,0 +1,48 @@
+# Bridging ETH to PGN
+
+import { Callout } from 'nextra/components'
+
+In this guide, we will discuss how to bridge ETH to PGN using the PGN mainnet bridge.
+
+<Callout type="warning">
+Warning:
+Please do not transfer large amounts of ETH to PGN. It is recommended to transfer a small amount of ETH when bridging for the first time. 
+
+Also, do not directly transfer WETH or any ERC-20 tokens to the bridge address.
+</Callout>
+
+## Using the PGN Bridge
+
+### Mainnet
+
+Follow these steps to bridge ETH from Ethereum (L1) to PGN mainnet network (L2):
+
+1. Navigate to the PGN bridge: 
+[bridge.publicgoods.network](https://bridge.publicgoods.network)
+2. Connect your wallet.
+3. Make sure the following are set up within the bridge.
+    * Set “Asset” to “ETH”
+    * Set “From” to “Ethereum”
+    * Set “To” to “PGN”
+4. Enter the amount of ETH you’d like to bridge to PGN.
+5. Deposit your tokens to the bridge.
+6. Pay the gas fee.
+7. Wait for the transaction to process.
+
+Although the bridge will offer status updates when the transaction state changes, you might go as much as 30 seconds without an update. This is to be expected depending on the gas amount paid and the settlement speed on the L1. 
+
+*When bridging to Bedrock chains such as PGN, you may need to increase the gas for the bridge transaction to settle properly. If you are running into transaction errors when trying to bridge, try increasing the gas. More details can be found in the [Bedrock documentation](https://community.optimism.io/docs/developers/bedrock/differences/#deposits-from-the-underlying-l1-ethereum-goerli-etc-to-l2-op-mainnet-op-goerli-etc).*
+
+You can review your bridge transactions by navigation to the [block explorer](https://explorer.publicgoods.network) and searching for your wallet address. Note that you might need to use your actual wallet address instead of an ENS or custom domain name. 
+
+
+### Testnet
+
+The instructions for testnet are very similar. However, you will use the following PGN Sepolia bridge instead, and bridge from Sepolia to PGN Testnet instead. 
+[pgn-bridge.vercel.app/bridge](https://pgn-bridge.vercel.app/bridge)
+
+If you need to request testnet Sepolia ETH, you can do so via the following faucets:
+* [sepoliafaucet.com](https://sepoliafaucet.com)
+* [infura.io/faucet/sepolia](https://infura.io/faucet/sepolia)
+* [faucetlink.to/sepolia](https://faucetlink.to/sepolia)
+
