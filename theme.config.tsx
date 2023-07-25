@@ -147,7 +147,7 @@ const config: DocsThemeConfig = {
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content="@pgn_eth" />
       <meta name="twitter:image" content="https://docs.publicgoods.network/social-card.png" />
-      <meta name="og:title" content={title ? title + ' – {PGN}' : 'PGN'}  />
+      <meta name="og:title" content="Public Goods Network"  />
       <meta name="og:description" content="PGN: Secure the future of public goods"  />
       <meta name="og:image" content="https://docs.publicgoods.network/social-card.png" />
     </>
