@@ -1,28 +1,11 @@
 {
-  "index": {
-    "title": "Introduction"
-  },
-  "about": {
-    "title": "About"
-  },
-  "getting-started": {
-    "title": "Getting Started"
-  },
-  "quick-links": {
-    "title": "Quick Links",
-    "children": [
-      {
-        "name": "Bridge",
-        "href": "https://pgn-bridge.vercel.app/bridge",
-        "newWindow": true
-      },
-      {
-        "name": "Block Explorer",
-        "href": "https://explorer.sepolia.publicgoods.network/",
-        "newWindow": true
-      }
-    ]
-  },
+  "index": "Introduction",
+  "about": "About",
+  "faq": "FAQ",
+  "network-and-contract-details": "Network and Contract Details",
+  "using-pgn": "Using PGN",
+  "building-with-pgn": "Building with PGN",
+  "tools": {"title": "Tools"},
   "get-involved": "Get Involved",
   "home": {
     "title": "Home",

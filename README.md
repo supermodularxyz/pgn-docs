@@ -1,23 +1,15 @@
-# Nextra Docs Template 
+# PGN Docs
 
-This is a template for creating documentation with [Nextra](https://nextra.site).
+This repo contains the public documentation for the Public Goods Network (PGN).
 
-[**Live Demo →**](https://nextra-docs-template.vercel.app)
+## What is PGN
 
-[![](.github/screenshot.png)](https://nextra-docs-template.vercel.app)
+Public Goods Network (PGN) is a low-cost Layer 2 (L2) built on top of Ethereum for supporting public goods. It is built on the [Bedrock](https://stack.optimism.io/docs/releases/bedrock/explainer/) version of [OP Stack](https://stack.optimism.io/), in collaboration with Optimism.
 
-## Quick Start
+## Docs stack
 
-Click the button to clone this repository and deploy it on Vercel:
+We utilized [Nextra](https://nextra.site) to build these docs, and [Vercel](https://vercel.com/templates/next.js/documentation-starter-kit) to deploy. 
 
-[![](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2Fshuding%2Fnextra-docs-template&showOptionalTeamCreation=false)
+## Making contributions
 
-## Local Development
-
-First, run `pnpm i` to install the dependencies.
-
-Then, run `pnpm dev` to start the development server and visit localhost:3000.
-
-## License
-
-This project is licensed under the MIT License.
+Please feel free to submit issues or pull requests to help us improve these docs!

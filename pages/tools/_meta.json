@@ -1,0 +1,15 @@
+{
+  "bridge":
+    {
+      "title": "Bridge",
+      "href": "https://bridge.publicgoods.network",
+      "newWindow": true
+    },
+  "block-explorer":
+    {
+      "title": "Block Explorer",
+      "href": "https://explorer.publicgoods.network",
+      "newWindow": true
+    },
+  "testnet": "Testnet Tools"
+}

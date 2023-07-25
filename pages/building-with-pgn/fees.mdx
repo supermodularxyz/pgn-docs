@@ -1,0 +1,20 @@
+# How do network fees work on PGN?
+
+Since PGN is built using the OP Stack, we directly adopted their gas/fee structure. These fees are very similar to fees on the Ethereum L1 network, but there are some key differences that you need to understand about L2s built on the OP Stack.
+
+Overall, since your PGN transactions are submitted as part of a “rollup” back to the L1, the fees are substantially less to settle compared to settling directly on Ethereum mainnet.
+
+Learn more by reading the [OP Stack transaction fees documentation](https://community.optimism.io/docs/developers/build/transaction-fees/).
+
+### Fee breakdown
+
+Every PGN transaction consists of two costs: 
+1. An L2 (execution) fee 
+2. An L1 (security) fee 
+
+The L2 fee is the cost to execute your transaction on the L2, and the L1 fee is the estimated cost to publish the transaction on the L1. Typically the L1 security fee is higher than the L2 execution fee.
+
+The L1 fee will vary depending on the amount of transactions on the L1. If the timing of your transaction is flexible, you can save costs by submitting transactions during periods of lower gas on the L1 (for example, over the weekend).
+
+Similarly, the L2 fee can increase and decrease depending on how many transactions are being submitted to the L2. This adjustment mechanism has the same implementation as the L1.
+
