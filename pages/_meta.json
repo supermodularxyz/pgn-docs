@@ -5,11 +5,19 @@
   "network-and-contract-details": "Network and Contract Details",
   "using-pgn": "Using PGN",
   "building-with-pgn": "Building with PGN",
-  "tools": {"title": "Tools"},
+  "tools": { "title": "Tools" },
   "get-involved": "Get Involved",
-  "home": {
-    "title": "Home",
-    "href": "https://publicgoods.network/",
+  "docs": {
+    "title": "Docs",
+    "href": "/",
     "type": "page"
+  },
+
+  "blog": {
+    "title": "Blog",
+    "type": "page",
+    "theme": {
+      "typesetting": "article"
+    }
   }
 }
