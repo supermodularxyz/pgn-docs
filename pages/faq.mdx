@@ -1,5 +1,26 @@
 # FAQs
 
+## High-traffic support requests
+
+### Why can't I bridge tokens from PGN back to Ethereum, quickly?
+
+PGN is an OP Stack L2, which has a specific process for bridging tokens from the L2 (PGN) back to the L1 (Ethereum). 
+
+When bridging, your transaction must go through a seven day challenge period. 
+
+This challenge period is important, as it is designed to protect users from fraud.  During this period, a user can submit a fault proof to challenge a transaction before it is relayed from the L2 to the L1. 
+
+To successfully bridge from PGN to Ethereum, you must follow these instructions:
+1. Submit the transaction using the bridge.
+2. Navigate to the [Transactions](https://bridge.sepolia.publicgoods.network/transactions) page. You will eventually see your transaction show up with the status, "Waiting for state root".
+3. Within 30 minutes, your transaction status will change to "Ready to prove." Click the "Prove" button to initiate the challenge window.
+4. The transaction status will change to "In challenge period" and will display how much time is left in the period via the "Time left" column. 
+5. Once the challenge period is over, the transaction status will change to "Ready to relay". You will need to click the "Finalize" button to relay the transaction to PGN. 
+
+At this point, the transaction should say "Relayed", which means that the tokens have successfully been bridged to Ethereum. 
+
+**If you don't perform all of these tasks, your transaction will not be bridged properly.**
+
 ## PGN Basics
 
 ### What is PGN?
