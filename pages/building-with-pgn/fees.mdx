@@ -9,12 +9,51 @@ Learn more by reading the [OP Stack transaction fees documentation](https://comm
 ### Fee breakdown
 
 Every PGN transaction consists of two costs: 
-1. An L2 (execution) fee 
-2. An L1 (security) fee 
+1. An L2 execution fee 
+2. An L1 data fee 
 
-The L2 fee is the cost to execute your transaction on the L2, and the L1 fee is the estimated cost to publish the transaction on the L1. Typically the L1 security fee is higher than the L2 execution fee.
+The total PGN transaction fee is a simple equation adding these two fees:
 
-The L1 fee will vary depending on the amount of transactions on the L1. If the timing of your transaction is flexible, you can save costs by submitting transactions during periods of lower gas on the L1 (for example, over the weekend).
+```
+transaction_fee = l2_execution_fee + l1_data_fee
+```
 
-Similarly, the L2 fee can increase and decrease depending on how many transactions are being submitted to the L2. This adjustment mechanism has the same implementation as the L1.
+#### L2 execution fee
+
+The L2 execution fee is the cost to execute your transaction on the L2.
+
+Just like on Ethereum, transactions on PGN have to pay gas for the amount of computation and storage that they use. Every L2 transaction will pay an execution fee equal to the amount of gas used by the transaction multiplied by the gas price attached to the transaction. 
+
+This fee is based on three factors:
+* The **[L2 base fee](https://community.optimism.io/docs/developers/build/transaction-fees/#base-fee)** is charged for each unit of gas that a transaction uses. It is the same base fee for each transaction in the block, and is detemined by formulas based on the base fee of the previous block and how full that block was. You can find the current L2 base fee on the [Optimism gas tracker dashboard](https://optimism.io/gas-tracker).
+* The **[priority fee](https://community.optimism.io/docs/developers/build/transaction-fees/#priority-fee)** is the amount that a user pays. To enable your users to select a priority fee, you can [build a priority fee estimator](https://docs.alchemy.com/docs/how-to-build-a-gas-fee-estimator-using-eip-1559). If you already have estimating code you use for L1 Ethereum, you can just use that.
+* The **amount of L2 gas used** depends on the transaction you are sending. With EVM equivalence, the L2 transactions use approximately the same amount of gas as they would on Ethereum. 
+
+You can calculate the L2 execution fee using the following equation:
+
+```
+transaction_gas_price = l2_base_fee + l2_priority_fee
+l2_execution_fee = transaction_gas_price * l2_gas_used
+```
+
+#### L1 data fee
+
+The L1 data fee is the estimated cost to publish the transaction on the L1. Typically the L1 data fee is higher than the L2 execution fee. This fee is the primary discrepancy between PGN and Ethereum. 
+
+This fee is based on four factors:
+* The gas cost to publish the transaction to Ethereum. This scales roughly with the size of the transaction in bytes. (`tx_data_gas`)
+* The current gas price on Ethereum. (`l1_gas_price`)
+* A fixed overhead cost denominated in gas. (`fixed_overhead`)
+* A dynamic overhead cost which scales the L1 fee paid by a fixed number. (`dynamic_overhead`)
+
+You can calculate the L1 data fee using the following equation:
+
+```
+tx_data_gas = count_zero_bytes(tx_data) * 4 + count_non_zero_bytes(tx_data) * 16
+l1_data_fee = l1_gas_price * (tx_data_gas + fixed_overhead) * dynamic_overhead
+```
+
+### Fee estimation tooling
+
+While you can use the above formulas to calculate the gas cost of transactions, you can also use the [Optimism SDK](https://github.com/ethereum-optimism/optimism-tutorial/tree/main/sdk-estimate-gas) or the [Optimism Fee Estimation tool](https://github.com/ethereum-optimism/optimism/tree/develop/packages/fee-estimation) to help generate these estimations for you. OP Stack fee estimation will soon be natively available in your preferred Ethereum tools.
 
