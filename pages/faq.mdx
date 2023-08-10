@@ -2,24 +2,42 @@
 
 ## High-traffic support requests
 
-### Why can't I bridge tokens from PGN back to Ethereum, quickly?
+### Why can't I bridge tokens from PGN back to Ethereum, immediately?
 
 PGN is an OP Stack L2, which has a specific process for bridging tokens from the L2 (PGN) back to the L1 (Ethereum). 
 
-When bridging, your transaction must go through a seven day challenge period. 
+**When bridging, your transaction must go through a seven day challenge period.**
 
 This challenge period is important, as it is designed to protect users from fraud.  During this period, a user can submit a fault proof to challenge a transaction before it is relayed from the L2 to the L1. 
 
 To successfully bridge from PGN to Ethereum, you must follow these instructions:
-1. Submit the transaction using the bridge.
-2. Navigate to the [Transactions](https://bridge.sepolia.publicgoods.network/transactions) page. You will eventually see your transaction show up with the status, "Waiting for state root".
-3. Within 30 minutes, your transaction status will change to "Ready to prove." Click the "Prove" button to initiate the challenge window.
-4. The transaction status will change to "In challenge period" and will display how much time is left in the period via the "Time left" column. 
-5. Once the challenge period is over, the transaction status will change to "Ready to relay". You will need to click the "Finalize" button to relay the transaction to PGN. 
+1. *Submit the transaction using the bridge.*
+2. *Navigate to the [Transactions](https://bridge.sepolia.publicgoods.network/transactions) page.* You will eventually see your transaction show up with the status, "Waiting for state root".
+3. Within 30 minutes, your transaction status will change to "Ready to prove." *Click the "Prove" button to initiate the challenge window.*
+4. The transaction status will change to "In challenge period" and will display how much time is left in the period via the "Time left" column. *Wait for the seven day window to close.*
+5. Once the challenge period is over, the transaction status will change to "Ready to relay". *Click the "Finalize" button to relay the transaction to PGN.*
 
 At this point, the transaction should say "Relayed", which means that the tokens have successfully been bridged to Ethereum. 
 
+To put this process a different way, please refer to the following table:
+
+| Step | Action                                                       | Status                 | Wait time  |
+| ---- | ------------------------------------------------------------ | ---------------------- | ---------- |
+| 1    | Submit the transaction to the bridge.                        |                        |            |
+| 2    | Navigate to the Transaction page.                            | Waiting for state root | 30 minutes |
+| 3    | Click the "Prove" button to initiate the challenge window.   | Ready to prove         |            |
+| 4    | Wait for the seven day window to close                       | In challenge period    | 7 days     |
+| 5    | Click the "Finalize" button to relay the transaction to PGN. | Ready to relay         |            |
+
 **If you don't perform all of these tasks, your transaction will not be bridged properly.**
+
+### Wen Discord?
+We do not plan to launch a Discord server for PGN at this time. 
+
+Instead, please join us on Telegram: [Join](https://t.me/+aR__6QhfEWs3ZTcx)
+
+**There is no Discord server - please don’t fall victim to scams asking you to join a server.**
+
 
 ## PGN Basics
 
@@ -123,13 +141,6 @@ You can transfer tokens to PGN using the following bridges:
 You can search transactions, wallets, and blocks on the network using the following explorers:
 * Mainnet block explorer: [explorer.publicgoods.network](https://explorer.publicgoods.network)
 * Testnet block explorer: [explorer.sepolia.publicgoods.network](https://explorer.sepolia.publicgoods.network)
-
-### Wen Discord?
-We do not plan to launch a Discord server for PGN at this time. 
-
-Instead, please join us on Telegram: [Join](https://t.me/+aR__6QhfEWs3ZTcx)
-
-**There is no Discord server - please don’t fall victim to scams asking you to join a server.**
 
 
 ## Using PGN
