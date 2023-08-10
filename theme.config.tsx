@@ -150,6 +150,13 @@ const config: DocsThemeConfig = {
       <meta name="og:title" content="Public Goods Network"  />
       <meta name="og:description" content="PGN: Secure the future of public goods"  />
       <meta name="og:image" content="https://docs.publicgoods.network/social-card.png" />
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XJ8H07N5T"></script>
+      <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-7XJ8H07N5T');
+      </script>
     </>
   )
 };
