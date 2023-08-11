@@ -1,5 +1,7 @@
 import React from "react";
 import { DocsThemeConfig } from "nextra-theme-docs";
+import NextScript from "next/script";
+
 
 const config: DocsThemeConfig = {
   primaryHue: {
@@ -141,8 +143,10 @@ const config: DocsThemeConfig = {
   docsRepositoryBase: "https://github.com/supermodularxyz/pgn-docs/tree/main",
   footer: {
     text: "PGN Docs",
-  },
-  head: (
+  }
+};
+
+const CustomHead: React.FC = () => (
     <>
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content="@pgn_eth" />
@@ -169,7 +173,6 @@ const config: DocsThemeConfig = {
       ></script>
     </NextScript>
     </>
-  )
-};
+  );
 
-export default config;
+export default { ...config, head: CustomHead };
