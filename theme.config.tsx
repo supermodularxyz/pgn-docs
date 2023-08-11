@@ -151,12 +151,23 @@ const config: DocsThemeConfig = {
       <meta name="og:description" content="PGN: Secure the future of public goods"  />
       <meta name="og:image" content="https://docs.publicgoods.network/social-card.png" />
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XJ8H07N5T"></script>
-      <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-7XJ8H07N5T');
-      </script>
+      <NextScript>
+      {/* Add the Google Analytics script */}
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-7XJ8H07N5T"
+      ></script>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-7XJ8H07N5T');
+          `,
+        }}
+      ></script>
+    </NextScript>
     </>
   )
 };
