@@ -1,0 +1,84 @@
+# Get Involved
+
+We're looking for public goods maxis to help us build and launch PGN. If that is you, there are two ways you can join the community and get involved:
+
+1. Join the [Telegram community](https://t.me/+9_ZHRaz7nmJkMTIx) if you're interested in building on PGN and helping us set up core infrastructure on the protocol.
+2. If you are interested in deploying on PGN, or joining the [Alliance](/faq#what-is-the-public-goods-alliance), please reach out to pgn@gitcoin.co.
+
+We also encourage you to provide feedback or make contributions to our developer docs in GitHub.
+
+### Contributing to Internationalizing Our Documentation
+
+Contributing to the internationalization of our documentation is a rewarding way to support our project and enhance its accessibility. We follow the "docs-as-code" model, which treats documentation as code, making it easier for both developers and non-developers to contribute. Here's a simple set of steps you can take to make an open-source contribution to our internationalization efforts:
+
+#### Step 1
+
+First off, you should be making contributions to this [documentation repository](https://github.com/supermodularxyz/pgn-docs) on GitHub.
+
+#### Step 2
+
+Once you've opened a new branch, you will need to make updates the following updates before translating any content:
+
+In `next.config.js`, please add the language code of the language you are working with to `i18n` > `locales`. 
+
+Example: 
+
+```js filename="next.config.js" {7-10}
+const withNextra = require('nextra')({
+  theme: 'nextra-theme-docs',
+  themeConfig: './theme.config.tsx'
+})
+ 
+module.exports = withNextra({
+  i18n: {
+    locales: ['en', 'zh', 'de'],
+    defaultLocale: 'en'
+  }
+})
+```
+
+In `theme.config.jsx`, please make sure to add your language under `i18n`to configure the language dropdown.
+
+Example: 
+
+```js filename="theme.config.jsx"
+i18n: [
+  { locale: 'en', text: 'English' },
+  { locale: 'zh', text: '中文' },
+  { locale: 'de', text: 'Deutsch' },
+  { locale: 'ar', text: 'العربية', direction: 'rtl' }
+]
+```
+
+#### Step 3
+
+Next, you will duplicate all the files that you intend on translating and change the file name to have the locale codes as your file extension.
+
+Example:
+
+```plaintext
+/pages
+  _meta.en.json
+  _meta.zh.json
+  _meta.de.json
+  index.en.md
+  index.zh.md
+  index.de.md
+  ...
+```
+
+#### Step 4. 
+
+Translate the content into the chosen language.
+
+#### Step 5
+
+Create a pull request to submit the translated pages to the team for review. 
+
+#### Step 6
+
+Check back periodically to see what changes have been made to the docs so you can help adjust the translated pages.
+
+---
+
+Thank you for being a part of our global community of contributors!
