@@ -6,6 +6,9 @@ const config: DocsThemeConfig = {
     light:100,
     dark:140
   },
+  i18n: [
+    { locale: 'en', text: 'English' }
+  ],
   logo: (
     <div style={{ height: 40, display: "flex", gap: 8, alignItems: "end" }}>
       <svg
