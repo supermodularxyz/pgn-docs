@@ -1,5 +1,7 @@
 import React from "react";
 import { DocsThemeConfig } from "nextra-theme-docs";
+import NextScript from "next/script";
+
 
 const config: DocsThemeConfig = {
   primaryHue: {
@@ -144,8 +146,10 @@ const config: DocsThemeConfig = {
   docsRepositoryBase: "https://github.com/supermodularxyz/pgn-docs/tree/main",
   footer: {
     text: "PGN Docs",
-  },
-  head: (
+  }
+};
+
+const CustomHead: React.FC = () => (
     <>
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content="@pgn_eth" />
@@ -153,8 +157,25 @@ const config: DocsThemeConfig = {
       <meta name="og:title" content="Public Goods Network"  />
       <meta name="og:description" content="PGN: Secure the future of public goods"  />
       <meta name="og:image" content="https://docs.publicgoods.network/social-card.png" />
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XJ8H07N5T"></script>
+      <NextScript>
+      {/* Add the Google Analytics script */}
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-7XJ8H07N5T"
+      ></script>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-7XJ8H07N5T');
+          `,
+        }}
+      ></script>
+    </NextScript>
     </>
-  )
-};
+  );
 
-export default config;
+export default { ...config, head: CustomHead };
